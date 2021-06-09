@@ -19,7 +19,7 @@ function DayTxt(countDay) {
 }
 
 function printAbout() { 
-    const startTime = new Date('2021-06-07');
+    const startTime = new Date('2021-06-08');
     let lernTime = Date.now() - startTime;
     let countDay = Math.trunc(lernTime/86400000);
 //   console.log(DayTxt(countDay))
