@@ -34,13 +34,6 @@ function runWorkout() {
         if ((step-1) < allSteps) {
             let ids = 'circle'+step;
             document.getElementById(ids).style='color: red'
-            if (step>0) {
-                preStep = step - 1;
-                ids = 'circle'+preStep;
-                document.getElementById(ids).style='color: black'
-                document.getElementById('count').textContent = count
-                count--
-            }
             step++
             document.getElementById('timer').textContent = timerGlob
             document.getElementById('stop').textContent = 'Отдыхать'
@@ -58,7 +51,8 @@ function runWorkout() {
         if (runButton.className === 'start') {
             document.getElementById('run').className = 'restart'
             document.getElementById('run').textContent = 'Начать сначала'
-            document.getElementById('stop').style = 'visibility: visible;'   
+            document.getElementById('stop').style = 'visibility: visible;' +
+                'width: 100mm; height: 50mm'  
             printCircles(circles);
             step = 0;
             step = nextStep(step);
@@ -76,12 +70,20 @@ function runWorkout() {
         }
     })
     let stopButton = document.getElementById('stop');
-    //Отдых
+    //Нажали кнопку "Отдыхать" 
     stopButton.addEventListener('click', cel =>{
-            stateStop = !stateStop;
+            stateStop = !stateStop; // меняем маркер состояния кнопки
             if (stateStop) {
-                timer = timerGlob
+                timer = timerGlob //во временную переменную сохраняем значение таймера
+                    //меняем текст кнопки
                 document.getElementById('stop').textContent= 'Завершить отдых'
+                    //закрашиваем зелёным законченный круг
+                let ids = 'circle'+(step-1);
+                document.getElementById(ids).style='color: green'
+                    //уменьшаем количество оставшихся кругов 
+                document.getElementById('count').textContent = count
+                count--
+                    // запускаем таймер отсчёта времени
                 const myInterval = setInterval(() => {
                     if (!stateStop) {
                         clearInterval(myInterval);
@@ -92,7 +94,7 @@ function runWorkout() {
                     if ((timer >0)&&(stateStop)) {
                         timer --
                         document.getElementById('timer').textContent = timer
-                    } else if ((timer === 0 )&&(count !== 0)) { 
+                    } else if ((timer === 0 )&&((count+2) !== 0)) { 
                         step = nextStep(step)
                         clearInterval(myInterval);
                     } else if (count === 0) {
