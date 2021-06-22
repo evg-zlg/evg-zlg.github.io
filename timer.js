@@ -22,9 +22,9 @@ function runWorkout() {
     let stateStop = false; // состояние кнопки Отдыха
     let step = 0; // номер круга 
     let count = parseInt(document.getElementById('count').textContent.split('\n')[0])
-    const countGlob = count; // сохраняем количество кругов
+    let countGlob = count; // сохраняем количество кругов
     let timer = parseInt(document.getElementById('timer').textContent.split('\n')[0])
-    const timerGlob = timer; // сохраняем количество времени на отдых
+    let timerGlob = timer; // сохраняем количество времени на отдых
 
     const circles = createCircles(count); // генерируем массив кругов 
     const allSteps = circles.length -1; // сохраняем количество кругов 
@@ -52,7 +52,12 @@ function runWorkout() {
             document.getElementById('run').className = 'restart'
             document.getElementById('run').textContent = 'Начать сначала'
             document.getElementById('stop').style = 'visibility: visible;' +
-                'width: 80mm; height: 50mm; font-size: 300%;'  
+                'width: 50mm; height: 30mm; font-size: 200%;'  
+            document.getElementById('cPlus').style = 'visibility: hidden;'
+            document.getElementById('cMinus').style = 'visibility: hidden;'
+            document.getElementById('tPlus').style = 'visibility: hidden;'
+            document.getElementById('tMinus').style = 'visibility: hidden;'
+
             printCircles(circles);
             step = 0;
             step = nextStep(step);
@@ -61,7 +66,11 @@ function runWorkout() {
         } else if (runButton.className === 'restart') {
             document.getElementById('run').className = 'start'
             document.getElementById('run').textContent = 'Начать тренировку'
-            document.getElementById('stop').style = 'visibility: hidden;'
+            document.getElementById('stop').style = 'visibility: hidden; width: 10mm;'
+            document.getElementById('cPlus').style = 'visibility: visible; width: 10mm;'
+            document.getElementById('cMinus').style = 'visibility: visible; width: 10mm;'
+            document.getElementById('tPlus').style = 'visibility: visible; width: 10mm;'
+            document.getElementById('tMinus').style = 'visibility: visible; width: 10mm;'
             document.getElementById('timer').textContent = timerGlob;
             document.getElementById('count').textContent = countGlob;
             timer = timerGlob
@@ -108,5 +117,17 @@ function runWorkout() {
             step = nextStep(step);
             document.getElementById('timer').textContent = timerGlob
             }
+    })
+    
+    let tPlusButton = document.getElementById('tPlus');
+    tPlusButton.addEventListener('click', cel => {
+        timerGlob = timerGlob +5;
+        document.getElementById('timer').textContent = timerGlob
+    })
+    
+    let tMinusButton = document.getElementById('tMinus');
+    tMinusButton.addEventListener('click', cel => {
+        timerGlob = timerGlob -5;
+        document.getElementById('timer').textContent = timerGlob
     })
 }
