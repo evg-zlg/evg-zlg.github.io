@@ -52,7 +52,7 @@ function runWorkout() {
             document.getElementById('run').className = 'restart'
             document.getElementById('run').textContent = 'Начать сначала'
             document.getElementById('stop').style = 'visibility: visible;' +
-                'width: 100mm; height: 50mm'  
+                'width: 80mm; height: 50mm; font-size: 300%;'  
             printCircles(circles);
             step = 0;
             step = nextStep(step);
@@ -93,7 +93,7 @@ function runWorkout() {
                     }
                     if ((timer >0)&&(stateStop)) {
                         timer --
-                        document.getElementById('timer').textContent = timer
+                        document.getElementById('stop').textContent = timer
                     } else if ((timer === 0 )&&((count+2) !== 0)) { 
                         step = nextStep(step)
                         clearInterval(myInterval);
