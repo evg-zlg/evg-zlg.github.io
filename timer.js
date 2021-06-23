@@ -10,7 +10,7 @@ function createCircles(count) { //создаем массив кругов
 }
 
 function printCircles(circles) {
-    let str = '<ul style = "color: black">'
+    let str = '<ul style = "color: black; font-size: 25px;">' 
     for (i=0; i<circles.length; i++) {
         str += '<li id="circle'+i+'">'+circles[i]+'</li>'
     }
@@ -52,15 +52,15 @@ function runWorkout() {
             document.getElementById('run').className = 'restart'
             document.getElementById('run').textContent = 'Начать сначала'
             document.getElementById('stop').style = 'visibility: visible;' +
-                'width: 100%; height: 30mm; font-size: 220%; ' +
+                'width: 100%; height: 35%; font-size: 300%; ' +
                 'position: fixed; top: 0; left: 0; border-radius: 4px;'+
                 'box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);'+
                 'background-color: white;'  
-            document.getElementById('circles').style = 'position: fixed; top: 30mm'
-            document.getElementById('run').style = 'position: fixed; top: 100mm; left:0; ' +
+            document.getElementById('circles').style = 'position: fixed; top: 35%'
+            document.getElementById('run').style = 'position: fixed; bottom: 0; left:0; ' +
                 'width: 100%;  height: 20mm; border-radius: 4px; margin: center'+
                 'box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);'+
-                'background-color: white;'
+                'background-color: white; font-size: 200%'
 
             document.getElementById('cPlus').style = 'visibility: hidden;'
             document.getElementById('cMinus').style = 'visibility: hidden;'
