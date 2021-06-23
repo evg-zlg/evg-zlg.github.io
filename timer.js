@@ -52,11 +52,11 @@ function runWorkout() {
             document.getElementById('run').className = 'restart'
             document.getElementById('run').textContent = 'Начать сначала'
             document.getElementById('stop').style = 'visibility: visible;' +
-                'width: 100%; height: 35%; font-size: 300%; ' +
+                'width: 100%; height: 30%; font-size: 300%; ' +
                 'position: fixed; top: 0; left: 0; border-radius: 4px;'+
                 'box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);'+
                 'background-color: white;'  
-            document.getElementById('circles').style = 'position: fixed; top: 35%'
+            document.getElementById('circles').style = 'position: fixed; top: 30%'
             document.getElementById('run').style = 'position: fixed; bottom: 0; left:0; ' +
                 'width: 100%;  height: 10mm; border-radius: 4px; margin: center'+
                 'box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);'+
