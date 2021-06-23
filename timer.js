@@ -54,11 +54,13 @@ function runWorkout() {
             document.getElementById('stop').style = 'visibility: visible;' +
                 'width: 100%; height: 30mm; font-size: 220%; ' +
                 'position: fixed; top: 0; left: 0; border-radius: 4px;'+
-                'box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);'  
+                'box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);'+
+                'background-color: white;'  
             document.getElementById('circles').style = 'position: fixed; top: 30mm'
-            document.getElementById('run').style = 'position: fixed; top: 100mm;' +
+            document.getElementById('run').style = 'position: fixed; top: 100mm; left:0; ' +
                 'width: 100%;  height: 20mm; border-radius: 4px; margin: center'+
-                'box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);'
+                'box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);'+
+                'background-color: white;'
 
             document.getElementById('cPlus').style = 'visibility: hidden;'
             document.getElementById('cMinus').style = 'visibility: hidden;'
