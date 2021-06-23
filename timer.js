@@ -10,7 +10,7 @@ function createCircles(count) { //создаем массив кругов
 }
 
 function printCircles(circles) {
-    let str = '<ul style = "color: black; font-size: 25px;">' 
+    let str = '<ul style = "color: black; font-size: 20px;">' 
     for (i=0; i<circles.length; i++) {
         str += '<li id="circle'+i+'">'+circles[i]+'</li>'
     }
@@ -58,7 +58,7 @@ function runWorkout() {
                 'background-color: white;'  
             document.getElementById('circles').style = 'position: fixed; top: 35%'
             document.getElementById('run').style = 'position: fixed; bottom: 0; left:0; ' +
-                'width: 100%;  height: 20mm; border-radius: 4px; margin: center'+
+                'width: 100%;  height: 15mm; border-radius: 4px; margin: center'+
                 'box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);'+
                 'background-color: white; font-size: 200%'
 
