@@ -72,6 +72,8 @@ function runWorkout() {
 
         } else if (runButton.className === 'restart') {
             document.getElementById('run').className = 'start'
+            document.getElementById('run').style = 'position: fixed; top: 100mm;'+
+                    'width: 50mm; height: 10mm;'
             document.getElementById('run').textContent = 'Начать тренировку'
             document.getElementById('stop').style = 'visibility: hidden; width: 10mm;'
             document.getElementById('cPlus').style = 'visibility: visible; width: 10mm;'
