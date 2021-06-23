@@ -53,9 +53,10 @@ function runWorkout() {
             document.getElementById('run').textContent = 'Начать сначала'
             document.getElementById('stop').style = 'visibility: visible;' +
                 'width: 50mm; height: 30mm; font-size: 200%; ' +
-                'position: fixed; top: 0; left: 0; border-radius: 1px;'  
+                'position: fixed; top: 0; left: 0; border-radius: 3px;'  
             document.getElementById('circles').style = 'position: fixed; top: 30mm'
-            document.getElementById('run').style = 'position: fixed; top: 100mm; width: 50mm'
+            document.getElementById('run').style = 'position: fixed; top: 100mm;'+
+                    'width: 50mm; height: 10mm;'
 
             document.getElementById('cPlus').style = 'visibility: hidden;'
             document.getElementById('cMinus').style = 'visibility: hidden;'
