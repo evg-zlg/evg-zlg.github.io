@@ -12,7 +12,7 @@
     <div id='baseinf' class="baseinf">
         <table>
             <tr>
-                <td>Количество кругов:
+                <td>Кругов:
                 <td id='count'>6
                 <td>
                     <button id='cPlus' class="plusminus" style='width: 10mm;'
@@ -23,7 +23,7 @@
                     </button>
             </tr> 
             <tr>
-                <td>Время отдыха, сек:
+                <td>Отдых:
                 <td id='timer'>60
                 <td>    
                     <button id='tPlus' class="plusminus" style='width: 10mm;'
@@ -43,16 +43,19 @@
             </tr>
         <table>
     </div>
-    <button id = 'stop'
-    style = 'visibility: hidden;'
-    >
-        Отдыхать
-    </button>
-    <p><button id='run' class="start">
-        Начать тренировку
-        <script> runWorkout() </script>
-    </button>
-    </p>
+    <div id = 'buttonStop'>
+        <button id = 'stop'
+        style = 'visibility: hidden;'
+        >
+            Отдыхать
+        </button>
+    </div>
+    <div>
+        <button id='run' class="start" style = 'width: 50mm'>
+            Начать тренировку
+            <script> runWorkout() </script>
+        </button>
+    </div>
 
 
 </body>
