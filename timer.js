@@ -77,6 +77,10 @@ function runWorkout() {
         } else if (runButton.className === 'restart') {
             document.getElementById('run').className = 'start'
             document.getElementById('run').textContent = 'Начать тренировку'
+            document.getElementById('run').style = 'position: fixed; top: 30%;'+
+                'left:0; width: 100%;  height: 50%; border-radius: 4px;'+
+                'box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);'+
+                'background-color: white; font-size: 200%;'
             document.getElementById('stop').style = 'visibility: hidden; width: 10mm;'
             document.getElementById('cPlus').style = 'visibility: visible; width: 10mm;'
             document.getElementById('cMinus').style = 'visibility: visible; width: 10mm;'
