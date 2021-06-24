@@ -10,7 +10,7 @@ function createCircles(count) { //создаем массив кругов
 }
 
 function printCircles(circles) {
-    let str = '<ul style = "color: black; font-size: 15px;">' 
+    let str = '<ul style = "color: black; font-size: 25px;">' 
     for (i=0; i<circles.length; i++) {
         str += '<li id="circle'+i+'">'+circles[i]+'</li>'
     }
